@@ -388,9 +388,26 @@ section { padding: 6rem 2rem; }
 
 .store-card {
   border: 1px solid rgba(255,255,255,0.1);
-  padding: 2rem 2rem 1.8rem;
+  padding: 0 0 1.8rem;
   border-radius: 2px;
   transition: var(--transition);
+  overflow: hidden;
+}
+.store-card-img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+.store-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.store-card-num,
+.store-card h3,
+.store-row {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .store-card:hover {
   border-color: var(--color-gold);

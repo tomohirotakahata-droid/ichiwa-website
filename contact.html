@@ -104,7 +104,11 @@
       <div>
         <div class="contact-form-wrap">
           <h2>お問い合わせフォーム</h2>
-          <form id="contact-form">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="deb19a49-49ca-4fe7-b8d5-4f23b5d3f82b">
+            <input type="hidden" name="subject" value="【いちわ】お問い合わせが届きました">
+            <input type="hidden" name="from_name" value="いちわ お問い合わせフォーム">
+            <input type="hidden" name="redirect" value="false">
             <div class="form-group">
               <label>お名前</label>
               <input type="text" name="name" placeholder="山田 太郎" required>
@@ -134,12 +138,16 @@
               <label>メッセージ</label>
               <textarea name="message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
             </div>
-            <button type="submit" class="btn-submit">送信する</button>
+            <button type="submit" class="btn-submit" id="submit-btn">送信する</button>
           </form>
           <div class="form-success" id="form-success">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">✓</div>
             ありがとうございました。<br>
             お問い合わせを受け付けました。<br>
-            <small style="color:var(--color-brown-light);">※ このフォームはデモ用です。実際のお問い合わせはお電話にてお願いいたします。</small>
+            <small style="color:var(--color-brown-light);display:block;margin-top:0.8rem;">担当者より折り返しご連絡いたします。</small>
+          </div>
+          <div class="form-error" id="form-error" style="display:none;text-align:center;padding:1.5rem;color:#c0392b;font-size:0.88rem;">
+            送信に失敗しました。お手数ですが、お電話にてお問い合わせください。
           </div>
         </div>
       </div>
@@ -193,11 +201,28 @@
       a.addEventListener('click', () => mobileNav.classList.remove('open'));
     });
 
-    // Form submit demo
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = '送信中...';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(this)
+        });
+        const data = await res.json();
+        if (data.success) {
+          this.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          throw new Error(data.message);
+        }
+      } catch (err) {
+        btn.textContent = '送信する';
+        btn.disabled = false;
+        document.getElementById('form-error').style.display = 'block';
+      }
     });
   </script>
 </body>

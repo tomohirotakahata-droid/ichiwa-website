@@ -1,0 +1,276 @@
+{
+  "lastUpdated": "2026-03-20",
+  "categories": [
+    {
+      "id": "signature",
+      "name": "いちわ名物",
+      "items": [
+        {
+          "name": "牛タン全部盛り",
+          "description": "1本のタンから取れる４つの部位を一皿で。特選厚切タン・並タン・タン赤身・旨味タンカルビ",
+          "variants": [
+            { "label": "2名盛り", "price": 2816 },
+            { "label": "3名盛り", "price": 4224 },
+            { "label": "4名盛り", "price": 5632 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tongue",
+      "name": "牛タン塩",
+      "items": [
+        { "name": "特選厚切タン塩", "price": 2178 },
+        { "name": "タン赤身", "price": 1122 },
+        { "name": "並タン塩", "price": 1628 },
+        { "name": "ネギタンカルビ", "price": 1078 },
+        { "name": "食べ応えの一本タン", "price": 858 },
+        { "name": "どっさりネギにんにくタン", "price": 1078 },
+        { "name": "キザミネギ塩", "price": 220 }
+      ]
+    },
+    {
+      "id": "yukhoe",
+      "name": "ユッケ",
+      "note": "※お子様やご年配の方は食中毒のリスクがあるため食肉の生食はお控えください",
+      "items": [
+        { "name": "ハツユッケ", "price": 1199 },
+        { "name": "桜ユッケ", "price": 1199 }
+      ]
+    },
+    {
+      "id": "motsusashi",
+      "name": "モツ刺し",
+      "items": [
+        { "name": "モツ刺し３種盛り", "price": 1848 },
+        { "name": "ハツ刺し", "price": 999 },
+        { "name": "センマイ刺し", "price": 959 },
+        { "name": "ハチノス刺し", "price": 959 },
+        { "name": "ガツ刺し", "price": 649 },
+        { "name": "ガツポン", "price": 649 }
+      ]
+    },
+    {
+      "id": "moriawase",
+      "name": "盛り合わせ",
+      "items": [
+        {
+          "name": "「並」いちわ盛り",
+          "description": "黒毛和牛並カルビ、並ハラミ、国産並赤身、トントロ、野菜",
+          "variants": [
+            { "label": "2名盛り（各4切れ）", "price": 3729 },
+            { "label": "3名盛り（各6切れ）", "price": 5593 },
+            { "label": "4名盛り（各8切れ）", "price": 7458 }
+          ]
+        },
+        {
+          "name": "「上」いちわ盛り",
+          "description": "黒毛和牛上カルビ、特選和牛ハラミ、JRS（黒毛真牛特上ロース）、野菜",
+          "variants": [
+            { "label": "2名盛り（各4切れ）", "price": 5478 },
+            { "label": "3名盛り（各6切れ）", "price": 8217 },
+            { "label": "4名盛り（各8切れ）", "price": 10956 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harami",
+      "name": "ハラミ",
+      "note": "全て塩かタレかお選びいただけます",
+      "items": [
+        { "name": "ニンニクハラミ", "price": 1419 },
+        { "name": "特選和牛ハラミ 厚切り", "price": 2519 },
+        { "name": "特選和牛ハラミ 薄切り", "price": 2519 },
+        { "name": "並ハラミ", "price": 1364 }
+      ]
+    },
+    {
+      "id": "beef",
+      "name": "厳選精肉",
+      "note": "全て塩かタレかお選びいただけます",
+      "items": [
+        { "name": "厳選和牛ロース", "description": "黒毛和牛ザブトンにネギをどっさり乗せて専用ダレで", "price": 2629 },
+        { "name": "ＪＲＳ", "description": "黒毛和牛特（J）上ロースを（R）卵黄で（S）すき焼き風に", "price": 2519 },
+        { "name": "和牛並カルビ", "price": 1419 },
+        { "name": "和牛上カルビ", "price": 1859 },
+        { "name": "和牛並ロース", "price": 1419 },
+        { "name": "和牛上ロース", "price": 1859 },
+        { "name": "並赤身", "price": 979 }
+      ]
+    },
+    {
+      "id": "oshiri",
+      "name": "一押し",
+      "items": [
+        { "name": "和牛焼きしゃぶ", "description": "黒毛和牛メスの柔らかいお肉のレア焼きをポン酢ダレで", "price": 1419 },
+        { "name": "並赤身ニンニクバター", "description": "悪魔的ニンニクバターにディップ", "price": 1859 },
+        { "name": "ＪＲＳ", "description": "黒毛和牛上ロースをすき焼き風に", "price": 2189 },
+        { "name": "和牛ザブトン", "description": "黒毛和牛ザブトンにネギをどっさりのせた贅沢な一品", "price": 1199 }
+      ]
+    },
+    {
+      "id": "hormone_set",
+      "name": "ホルモン盛り合わせ",
+      "note": "芝浦直送の新鮮ホルモン",
+      "items": [
+        { "name": "４種盛り", "price": 1309 },
+        { "name": "６種盛り", "price": 1859 },
+        { "name": "あかミックス", "price": 979 }
+      ]
+    },
+    {
+      "id": "shabu",
+      "name": "しゃぶしゃぶ上レバー",
+      "items": [
+        { "name": "しゃぶしゃぶ上レバー", "price": 1309 }
+      ]
+    },
+    {
+      "id": "hormone",
+      "name": "その他ホルモン",
+      "subcategories": [
+        {
+          "name": "牛",
+          "items": [
+            { "name": "マルチョウ（小腸）", "price": 869 },
+            { "name": "シマチョウ（大腸）", "price": 869 },
+            { "name": "レバー（肝臓）", "price": 869 },
+            { "name": "ハツ（心臓）", "price": 869 },
+            { "name": "コリコリ（大動脈）", "price": 869 },
+            { "name": "ハチノス（第二胃袋）", "price": 869 },
+            { "name": "タンサキ（タンの先）", "price": 869 }
+          ]
+        },
+        {
+          "name": "豚",
+          "items": [
+            { "name": "特Ａミノ（胃袋）", "price": 759 },
+            { "name": "トントロ（首）", "price": 759 },
+            { "name": "チチカブ（おっぱい）", "price": 759 }
+          ]
+        },
+        {
+          "name": "鳥",
+          "items": [
+            { "name": "ヤゲン軟骨", "price": 649 },
+            { "name": "セセリ（首）", "price": 649 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": "おつまみ",
+      "items": [
+        { "name": "韓国海苔", "price": 319 },
+        { "name": "枝豆", "price": 319 },
+        { "name": "焼肉屋のポテトサラダ", "price": 539 },
+        { "name": "ナガイモざく切り", "price": 429 },
+        { "name": "にんにく胡麻油", "price": 429 },
+        { "name": "もろきゅう", "price": 429 },
+        { "name": "焼肉屋の煮込み", "price": 539, "recommended": true }
+      ]
+    },
+    {
+      "id": "vegetables",
+      "name": "野菜",
+      "items": [
+        { "name": "塩チョレギサラダ", "price": 649 },
+        { "name": "サンチュ", "price": 429 },
+        { "name": "サンチュダブル", "price": 759 },
+        { "name": "焼き野菜３種盛り", "price": 869 },
+        { "name": "ピーマン", "price": 429 },
+        { "name": "長ネギ", "price": 429 },
+        { "name": "エリンギ", "price": 429 },
+        { "name": "ひげ付きナガイモ", "price": 429 }
+      ]
+    },
+    {
+      "id": "kimchi",
+      "name": "ナムル・キムチ",
+      "items": [
+        { "name": "ごちゃ混ぜナムル", "price": 759 },
+        { "name": "豆もやしナムル", "price": 429 },
+        { "name": "キムチ盛り合わせ", "price": 869 },
+        { "name": "白菜キムチ", "price": 429 },
+        { "name": "カクテキ", "price": 429 },
+        { "name": "オイキムチ", "price": 429 }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "飯",
+      "items": [
+        { "name": "ライス（大）", "price": 429 },
+        { "name": "ライス（中）", "price": 319 },
+        { "name": "ライス（小）", "price": 209 },
+        { "name": "程辛ＴＫＧ", "price": 429 },
+        { "name": "ネギ飯", "price": 429 },
+        { "name": "煮込み飯", "price": 759 },
+        { "name": "焼肉屋のカレー", "price": 759 },
+        { "name": "石焼きガーリック飯", "price": 759 },
+        { "name": "「名物」石焼きビビンバ", "price": 869 },
+        { "name": "クッパ", "price": 759 },
+        { "name": "ユッケジャンクッパ", "price": 869 }
+      ]
+    },
+    {
+      "id": "noodles",
+      "name": "麺・汁・甘味",
+      "items": [
+        { "name": "いちわ特製冷麺", "price": 759 },
+        { "name": "ユッケジャン麺", "price": 869 },
+        { "name": "たまごスープ", "price": 539 },
+        { "name": "ユッケジャンスープ", "price": 649 },
+        { "name": "いちわのもなかアイス", "price": 429 }
+      ]
+    },
+    {
+      "id": "beer",
+      "name": "ビール",
+      "items": [
+        { "name": "中生", "price": 693 },
+        { "name": "メガ生", "price": 1177 },
+        { "name": "中瓶", "price": 869 },
+        { "name": "レッドアイ", "price": 693 }
+      ]
+    },
+    {
+      "id": "highball",
+      "name": "ハイボール",
+      "items": [
+        { "name": "ハイボール", "price": 550, "megaPrice": 935 },
+        { "name": "いちわハイボール（名物 大人の辛口ジンジャーハイ）", "price": 583, "megaPrice": 990 },
+        { "name": "コークハイボール", "price": 583 }
+      ]
+    },
+    {
+      "id": "chawari",
+      "name": "茶割り",
+      "items": [
+        { "name": "高濃度緑茶ハイ", "price": 473, "megaPrice": 800 },
+        { "name": "黒ウーロン茶ハイ", "price": 473, "megaPrice": 800 },
+        { "name": "ひげ茶ハイ", "price": 506, "megaPrice": 858 }
+      ]
+    },
+    {
+      "id": "hoppy",
+      "name": "ホッピー",
+      "items": [
+        { "name": "ホッピー（白・黒）", "price": 583 },
+        { "name": "なか", "price": 330 },
+        { "name": "そと", "price": 330 }
+      ]
+    },
+    {
+      "id": "shochu",
+      "name": "呑兵衛御用達",
+      "note": "2杯目以降をお得に",
+      "items": [
+        { "name": "こうばし茶割り", "price": 539, "megaPrice": 913 },
+        { "name": "だいやめ（フルーティで新感覚の焼酎 炭酸割りがおすすめ）", "price": 649, "megaPrice": 1089 }
+      ]
+    }
+  ]
+}

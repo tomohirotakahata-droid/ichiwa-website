@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>店舗情報 | いちわ</title>
+  <meta name="description" content="いちわの店舗情報。千歳船橋本店、経堂店、豪徳寺店、西永福店の4店舗。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .stores-page { background: var(--color-cream-warm); }
+    .stores-page-inner { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    .stores-list { display: flex; flex-direction: column; gap: 2.5rem; }
+    .store-full-card {
+      background: var(--color-white);
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .store-full-card-header {
+      background: var(--color-dark);
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .store-full-card-header h2 {
+      color: var(--color-white);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .store-full-card-header .store-num {
+      background: var(--color-gold);
+      color: var(--color-dark);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .store-full-card-body { padding: 2rem; }
+    .store-full-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .store-full-info-row { display: flex; flex-direction: column; gap: 0.2rem; }
+    .store-full-info-row dt {
+      font-size: 0.75rem;
+      color: var(--color-brown-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .store-full-info-row dd {
+      font-size: 0.9rem;
+      color: var(--color-dark);
+    }
+    .store-full-info-row dd a {
+      color: var(--color-dark);
+      text-decoration: none;
+    }
+    .store-full-info-row dd a:hover { color: var(--color-brown); }
+    .store-map {
+      width: 100%;
+      height: 200px;
+      background: var(--color-cream);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-brown);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      margin-top: 1rem;
+      border: 1px solid var(--color-cream);
+    }
+    .store-actions { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--color-dark);
+      color: var(--color-white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .btn-call:hover { background: var(--color-brown); }
+    .btn-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--color-brown-light);
+      color: var(--color-dark);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .btn-map:hover { background: var(--color-cream); }
+    @media (max-width: 600px) {
+      .store-full-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">いちわ</span>
+        <span class="logo-en">Ichiwa Yakiniku</span>
+      </a>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="menu.html">メニュー</a>
+        <a href="stores.html" class="active">店舗情報</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="#reserve" class="nav-reserve">ご予約</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="index.html">ホーム</a>
+      <a href="menu.html">メニュー</a>
+      <a href="stores.html">店舗情報</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="#reserve">ご予約</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>店舗情報</h1>
+    <p>OUR LOCATIONS</p>
+  </div>
+
+  <!-- Stores -->
+  <div class="stores-page">
+    <div class="stores-page-inner">
+      <div class="stores-list">
+
+        <div class="store-full-card">
+          <div class="store-full-card-header">
+            <div class="store-num">1</div>
+            <h2>酒を焼肉で いちわ 千歳船橋本店</h2>
+          </div>
+          <div class="store-full-card-body">
+            <div class="store-full-info">
+              <div class="store-full-info-row">
+                <dt>住所</dt>
+                <dd>〒156-0054 東京都世田谷区桜ヶ丘2丁目27-1</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>最寄り駅</dt>
+                <dd>千歳船橋駅</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>営業時間</dt>
+                <dd>17:00 〜 24:00</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0364136800">03-6413-6800</a></dd>
+              </div>
+            </div>
+            <div class="store-actions">
+              <a href="tel:0364136800" class="btn-call">📞 電話する</a>
+              <a href="https://maps.google.com/maps?q=東京都世田谷区桜ヶ丘2丁目27-1" target="_blank" class="btn-map">📍 地図を見る</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-full-card">
+          <div class="store-full-card-header">
+            <div class="store-num">2</div>
+            <h2>焼肉ホルモン 七厘いちわ 経堂店</h2>
+          </div>
+          <div class="store-full-card-body">
+            <div class="store-full-info">
+              <div class="store-full-info-row">
+                <dt>住所</dt>
+                <dd>〒156-0052 東京都世田谷区経堂2丁目15-11</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>最寄り駅</dt>
+                <dd>経堂駅</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>営業時間</dt>
+                <dd>17:00 〜 24:00</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0364137587">03-6413-7587</a></dd>
+              </div>
+            </div>
+            <div class="store-actions">
+              <a href="tel:0364137587" class="btn-call">📞 電話する</a>
+              <a href="https://maps.google.com/maps?q=東京都世田谷区経堂2丁目15-11" target="_blank" class="btn-map">📍 地図を見る</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-full-card">
+          <div class="store-full-card-header">
+            <div class="store-num">3</div>
+            <h2>七厘いちわ 豪徳寺店</h2>
+          </div>
+          <div class="store-full-card-body">
+            <div class="store-full-info">
+              <div class="store-full-info-row">
+                <dt>住所</dt>
+                <dd>〒154-0021 東京都世田谷区豪徳寺1丁目42-8</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>最寄り駅</dt>
+                <dd>豪徳寺駅</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>営業時間</dt>
+                <dd>17:00 〜 24:00</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0364131110">03-6413-1110</a></dd>
+              </div>
+            </div>
+            <div class="store-actions">
+              <a href="tel:0364131110" class="btn-call">📞 電話する</a>
+              <a href="https://maps.google.com/maps?q=東京都世田谷区豪徳寺1丁目42-8" target="_blank" class="btn-map">📍 地図を見る</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-full-card">
+          <div class="store-full-card-header">
+            <div class="store-num">4</div>
+            <h2>焼肉ホルモン七厘いちわ 西永福店</h2>
+          </div>
+          <div class="store-full-card-body">
+            <div class="store-full-info">
+              <div class="store-full-info-row">
+                <dt>住所</dt>
+                <dd>〒168-0064 東京都杉並区永福3丁目35-8</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>最寄り駅</dt>
+                <dd>西永福駅</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>営業時間</dt>
+                <dd>17:00 〜 24:00</dd>
+              </div>
+              <div class="store-full-info-row">
+                <dt>電話番号</dt>
+                <dd><a href="tel:0363043463">03-6304-3463</a></dd>
+              </div>
+            </div>
+            <div class="store-actions">
+              <a href="tel:0363043463" class="btn-call">📞 電話する</a>
+              <a href="https://maps.google.com/maps?q=東京都杉並区永福3丁目35-8" target="_blank" class="btn-map">📍 地図を見る</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-ja">いちわ</div>
+          <span class="logo-tagline">鮮度を楽しむ焼肉</span>
+          <p>芝浦直送の新鮮なお肉を<br>高級焼肉店クオリティでリーズナブルに。</p>
+        </div>
+        <div class="footer-col">
+          <h4>ページ</h4>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="stores.html">店舗情報</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>お問い合わせ</h4>
+          <div class="footer-contact">
+            <span>〒156-0052 東京都世田谷区経堂1-12-8</span>
+            <a href="tel:0334208440">03-3420-8440</a>
+            <a href="mailto:anloop.official@gmail.com">anloop.official@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 いちわ. All rights reserved.</span>
+        <span>東京都世田谷区</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

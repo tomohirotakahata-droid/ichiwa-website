@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メニュー | いちわ</title>
+  <meta name="description" content="いちわのメニュー一覧。牛タン、ホルモン、精肉、ドリンクなど豊富なラインアップ。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-text">
+        <span class="logo-ja">いちわ</span>
+        <span class="logo-en">Ichiwa Yakiniku</span>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="menu.html" class="active">メニュー</a>
+      <a href="stores.html">店舗情報</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="stores.html" class="nav-reserve">ご予約</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">ホーム</a>
+    <a href="menu.html">メニュー</a>
+    <a href="stores.html">店舗情報</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="stores.html">ご予約</a>
+  </nav>
+</header>
+
+<div class="page-header">
+    <h1>メニュー</h1>
+  <p>MENU</p>
+</div>
+
+<div class="menu-page">
+  <div class="menu-page-inner">
+    <div class="menu-note">
+      ※ 表示価格はすべて税込価格です。<br>
+      ※ お一人様はハーフサイズを４割引でご用意できます（盛り合わせは半額）。<br>
+      ※ メニューの内容・価格は予告なく変更する場合がございます。
+    </div>
+    <div class="menu-last-updated" id="last-updated"></div>
+    <div id="menu-container">
+      <div class="loading">メニューを読み込み中...</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-ja">いちわ</span>
+        </div>
+        <p class="footer-tagline">鮮度を楽しむ焼肉</p>
+        <p>芝浦直送の新鮮なお肉を<br>高級焼肉店クオリティでリーズナブルに。</p>
+      </div>
+      <div class="footer-col">
+        <h4>ページ</h4>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">メニュー</a></li>
+          <li><a href="stores.html">店舗情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>お問い合わせ</h4>
+        <div class="footer-contact">
+          <span>〒156-0052 東京都世田谷区経堂1-12-8</span>
+          <a href="tel:0334208440">03-3420-8440</a>
+          <a href="mailto:anloop.official@gmail.com">anloop.official@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 いちわ. All rights reserved.</span>
+      <span>東京都世田谷区</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 50));
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+</script>
+<script src="js/menu.js"></script>
+</body>
+</html>
